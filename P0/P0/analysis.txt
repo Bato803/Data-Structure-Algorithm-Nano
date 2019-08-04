@@ -1,0 +1,62 @@
+Assume texts has m rows, and calls has n rows.
+
+Task0:
+Time Complexity: O(1)
+Space Complexity: O(1)
+Explain:
+  indexing in python list take only constant time and we
+  are not storing anything here.
+
+
+Task1:
+Time Complexity: O(m+n)
+Space Complexity: O(m+n)
+Explain:
+  We iterate through both calls and texts once, and so the time
+  complexity is O(m+n).
+  In the worst case, every single number is different and we end
+  up storing all numbers. That's why space complexity is O(m+n)
+
+
+Task2:
+Time Complexity: O(n)
+Space Complexity: O(n)
+Explain:
+  we iterate through the call sheet once to calculate the time
+  spending of each cell phone. O(n)
+  We also iterate to find the max spending time. O(n)
+  Overall, the time complexity is O(n+n) --> O(n)
+  As for space, since we're storing the numbers' time spending, and
+  it ends up with O(n).
+
+
+Task3:
+PartA:
+Time Complexity: O(nlogn)
+Space Complexity: O(n)
+PartB:
+Time Complexity: O(n)
+Space Complexity: O(1)
+  Explain:
+    As for Part A, finding the numbers prefix or area code only takes O(n)
+    because we only iterate through the call sheet once. However, sorting
+    the result list takes O(nlog(n)). Overall, it's O(nlogn) time complexity.
+    For the space, the result list would take O(n)
+
+    As for Part B, iterate the sheet and checking if the called number starts
+    with (080) only takes O(n) time. And for the memory, we're not storing any
+    variable for this part, so it takes only O(1) space.
+
+
+Task4:
+Time Complexity: O(n^2+m^2)
+Space Complexity: O(n+m)
+Explain:
+  iterating the call/text sheet will take O(n) or O(m). However, adding new element
+  to the set of existing unique numbers take another O(n) or O(m) in the worst case.
+  So finding the unique elements takes O(m^2+n^2). The difference
+  operation of python set only takes O(m) or O(m). Overall, the time complexity
+  is O(m^2+n^2)
+
+  We are storing both the unique calls and texts number, therefore the space complexity
+  in the worst case(every number is unique) is O(m+n). 
