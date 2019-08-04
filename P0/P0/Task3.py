@@ -43,3 +43,52 @@ Print the answer as a part of a message::
 to other fixed lines in Bangalore."
 The percentage should have 2 decimal digits
 """
+
+def isFromBangalore(number):
+    """
+    Check if a phone number comes from Bangalore.
+    """
+    return number.startswith("(080)")
+
+def getAreaCodeOrPrefix(number):
+    """
+    Give a number, get either its prefix or area code.
+    Assume the input number is not from telemarketers.
+    """
+    if number.startswith("("):
+        pre, _ = number.split(")")
+        return pre[1:]
+    else:
+        return number[0:4]
+
+def partA_B(data):
+    partA_res = set()
+    from_Bangalore, to_Bangalore = 0., 0.
+    for row in data:
+        if isFromBangalore(row[0]):
+            from_Bangalore += 1
+            if row[1].startswith("(080)"):
+                to_Bangalore += 1
+
+            if not row[1].startswith("140"):
+                partA_res.add(getAreaCodeOrPrefix(row[1]))
+    return sorted(partA_res), to_Bangalore/from_Bangalore
+
+def run():
+    partA_result, partB_result = partA_B(calls)
+    print(f"The numbers called by people in Bangalore have codes:{partA_result}")
+    print(f"{partB_result:.2f} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.")
+
+run()
+
+"""
+Assume texts has m rows, and calls has n rows.
+
+PartA:
+Time Complexity: O(nlogn)
+Space Complexity: O(n)
+
+PartB:
+Time Complexity: O(n)
+Space Complexity: O(1)
+"""
