@@ -44,7 +44,7 @@ def find_telemarketers(texts, calls):
 
 def run():
     result = find_telemarketers(texts, calls)
-    print(f"These numbers could be telemarketers:{result}")
+    print(f"These numbers could be telemarketers:",*result,sep="\n")
 
 run()
 

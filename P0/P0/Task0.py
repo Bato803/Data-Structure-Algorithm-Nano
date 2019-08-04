@@ -20,7 +20,7 @@ Print messages:
 "Last record of calls, <incoming number> calls <answering number> at time <time>, lasting <during> seconds"
 """
 print(f"First record of texts, {texts[0][0]} texts {texts[0][1]} at time {texts[0][2]}")
-print(f"First record of calls, {calls[-1][0]} texts {calls[-1][1]} at time {calls[-1][2]}, last {calls[-1][3]} seconds")
+print(f"Last record of calls, {calls[-1][0]} texts {calls[-1][1]} at time {calls[-1][2]}, last {calls[-1][3]} seconds")
 
 """
 Assume texts has m rows, and calls has n rows.

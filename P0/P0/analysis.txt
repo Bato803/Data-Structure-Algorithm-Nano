@@ -8,6 +8,7 @@ Explain:
   are not storing anything here.
 
 
+Assume texts has m rows, and calls has n rows.
 Task1:
 Time Complexity: O(m+n)
 Space Complexity: O(m+n)
@@ -18,6 +19,7 @@ Explain:
   up storing all numbers. That's why space complexity is O(m+n)
 
 
+Assume texts has m rows, and calls has n rows.
 Task2:
 Time Complexity: O(n)
 Space Complexity: O(n)
@@ -30,6 +32,7 @@ Explain:
   it ends up with O(n).
 
 
+Assume texts has m rows, and calls has n rows.
 Task3:
 PartA:
 Time Complexity: O(nlogn)
@@ -48,6 +51,7 @@ Space Complexity: O(1)
     variable for this part, so it takes only O(1) space.
 
 
+Assume texts has m rows, and calls has n rows.
 Task4:
 Time Complexity: O(n^2+m^2)
 Space Complexity: O(n+m)

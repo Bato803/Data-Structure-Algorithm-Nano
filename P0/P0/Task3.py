@@ -72,11 +72,11 @@ def partA_B(data):
 
             if not row[1].startswith("140"):
                 partA_res.add(getAreaCodeOrPrefix(row[1]))
-    return sorted(partA_res), to_Bangalore/from_Bangalore
+    return sorted(partA_res), 100*(to_Bangalore/from_Bangalore)
 
 def run():
     partA_result, partB_result = partA_B(calls)
-    print(f"The numbers called by people in Bangalore have codes:{partA_result}")
+    print(f"The numbers called by people in Bangalore have codes:",*partA_result,sep="\n")
     print(f"{partB_result:.2f} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.")
 
 run()
